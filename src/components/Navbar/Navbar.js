@@ -4,9 +4,7 @@ function Navbar() {
   return (
     <>
       <nav>
-        <Link to="/">
-          <div>ksksk</div>
-        </Link>
+        <Link to="/">Navbar</Link>
       </nav>
     </>
   );
