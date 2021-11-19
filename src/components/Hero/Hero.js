@@ -13,8 +13,8 @@ function Hero() {
           height: "calc(350px + 7vw)",
         }}
       ></div>
-      <div class="absolute left-1/2 top-72">
-        <div class="relative -left-1/2 text-white">
+      <div className="absolute left-1/2 top-72">
+        <div className="relative -left-1/2 text-white">
           <p className="text-3xl text-center font-semibold font-serif">
             If you see something that moves you, and then snap it, you keep a
             moment.

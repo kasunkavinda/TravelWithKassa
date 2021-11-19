@@ -1,0 +1,15 @@
+.galleryImage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(350px + 7vw);
+  cursor: pointer;
+}
+
+.galleryImage:hover {
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+.dummy {
+  color: red;
+}
