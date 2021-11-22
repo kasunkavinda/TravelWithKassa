@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Gallery.module.css";
+import GalleryNavigator from "./GalleryNavigator/GalleryNavigator";
 
 const imageLists = [
   { id: 1, imageUrl: "url(/images/gallery-images/1.jpg)" },
@@ -12,6 +13,7 @@ const imageLists = [
 function Gallery() {
   return (
     <div className="container mx-auto">
+      <GalleryNavigator />
       {imageLists && imageLists.length > 0 && (
         <div className="grid md:grid-cols-3">
           {imageLists.map((imageList) => {
