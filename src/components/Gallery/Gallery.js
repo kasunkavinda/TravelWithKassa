@@ -23,10 +23,10 @@ const ObjectImageLists = [
 function Gallery() {
   const [ImageList, setImageList] = useState("ALL");
   return (
-    <div className="container mx-auto">
-      <div className="m-5">
+    <div className="container mx-auto mt-24">
+      <div className="m-4 grid md:grid-cols-6 ">
         <button
-          className="bg-green-300 hover:bg-green-400 focus:bg-green-400 p-3 rounded-lg mr-3 text-white"
+          className="bg-green-300 hover:bg-green-400 focus:bg-green-400 p-3 rounded-lg mr-3 text-white "
           onClick={() => setImageList("ALL")}
         >
           All

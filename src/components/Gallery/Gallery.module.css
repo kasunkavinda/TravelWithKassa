@@ -4,12 +4,10 @@
   background-repeat: no-repeat;
   height: calc(350px + 7vw);
   cursor: pointer;
+  transition: transform 0.2s; /* Animation */
 }
 
 .galleryImage:hover {
   filter: drop-shadow(8px 8px 10px gray);
-}
-
-.dummy {
-  color: red;
+  transform: scale(1.1);
 }

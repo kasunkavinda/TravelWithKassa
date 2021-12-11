@@ -1,0 +1,7 @@
+.whoiamImage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(500px + 7vw);
+  cursor: pointer;
+}

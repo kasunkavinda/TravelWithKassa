@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div>
       <div
-        className="filter brightness-50"
+        className="filter brightness-50 mt-14"
         style={{
           backgroundImage: "url(/images/hero-image/hero-image.jpg)",
           backgroundPosition: "center",
