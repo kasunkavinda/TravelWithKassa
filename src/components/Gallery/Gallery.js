@@ -41,7 +41,7 @@ function Gallery() {
           className="bg-green-300 hover:bg-green-400 focus:bg-green-400 p-3 rounded-lg mr-3 text-white"
           onClick={() => setImageList("OBJECTS")}
         >
-          Objects
+          Closeups
         </button>
       </div>
       {AllImageLists && AllImageLists.length && ImageList === "ALL" && (
