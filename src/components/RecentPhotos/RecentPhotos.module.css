@@ -1,10 +1,11 @@
 .recentImage {
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  height: calc(350px + 7vw);
+  height: 350px;
+  width: 100%;
   cursor: pointer;
   transition: transform 0.2s; /* Animation */
+  object-fit: cover;
 }
 
 .recentImage:hover {
