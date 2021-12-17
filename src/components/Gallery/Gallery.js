@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Spinner from "../Spinner/Spinner";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import classes from "./Gallery.module.css";
 
@@ -127,21 +128,23 @@ function Gallery() {
           Religious
         </button>
       </div>
-      {AllImageLists && AllImageLists.length && ImageList === "ALL" && (
-        <div className="grid md:grid-cols-3">
-          {AllImageLists.map((AllImageList) => {
-            return (
-              <div className="m-4" key={AllImageList.id}>
-                <LazyLoadImage
-                  alt="sample alt message"
-                  src={AllImageList.imageUrl} // use normal <img> attributes as props
-                  className={classes.galleryImage}
-                />
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <Suspense fallback={<Spinner />}>
+        {AllImageLists && AllImageLists.length && ImageList === "ALL" && (
+          <div className="grid md:grid-cols-3">
+            {AllImageLists.map((AllImageList) => {
+              return (
+                <div className="m-4" key={AllImageList.id}>
+                  <LazyLoadImage
+                    alt="sample alt message"
+                    src={AllImageList.imageUrl} // use normal <img> attributes as props
+                    className={classes.galleryImage}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </Suspense>
       {AllImageLists && AllImageLists.length && ImageList === "WILDLIFE" && (
         <div className="grid md:grid-cols-3">
           {AllImageLists.filter((AllImageList) => {
@@ -159,40 +162,46 @@ function Gallery() {
           })}
         </div>
       )}
-      {AllImageLists && AllImageLists.length && ImageList === "CLOSEUP" && (
-        <div className="grid md:grid-cols-3">
-          {AllImageLists.filter((AllImageList) => {
-            return AllImageList.category === "closeup";
-          }).map((AllImageList) => {
-            return (
-              <div className="m-4" key={AllImageList.id}>
-                <LazyLoadImage
-                  alt="sample alt message"
-                  src={AllImageList.imageUrl} // use normal <img> attributes as props
-                  className={classes.galleryImage}
-                />
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <Suspense fallback={<Spinner />}>
+        {AllImageLists && AllImageLists.length && ImageList === "CLOSEUP" && (
+          <div className="grid md:grid-cols-3">
+            {AllImageLists.filter((AllImageList) => {
+              return AllImageList.category === "closeup";
+            }).map((AllImageList) => {
+              return (
+                <div className="m-4" key={AllImageList.id}>
+                  <LazyLoadImage
+                    alt="sample alt message"
+                    src={AllImageList.imageUrl} // use normal <img> attributes as props
+                    className={classes.galleryImage}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </Suspense>
+
       {AllImageLists && AllImageLists.length && ImageList === "WHEELS" && (
-        <div className="grid md:grid-cols-3">
-          {AllImageLists.filter((AllImageList) => {
-            return AllImageList.category === "wheels";
-          }).map((AllImageList) => {
-            return (
-              <div className="m-4" key={AllImageList.id}>
-                <LazyLoadImage
-                  alt="sample alt message"
-                  src={AllImageList.imageUrl} // use normal <img> attributes as props
-                  className={classes.galleryImage}
-                />
-              </div>
-            );
-          })}
-        </div>
+        <Suspense fallback={<Spinner />}>
+          <div className="grid md:grid-cols-3">
+            {AllImageLists.filter((AllImageList) => {
+              return AllImageList.category === "wheels";
+            }).map((AllImageList) => {
+              return (
+                <div className="m-4" key={AllImageList.id}>
+                  <LazyLoadImage
+                    alt="sample alt message"
+                    src={AllImageList.imageUrl} // use normal <img> attributes as props
+                    className={classes.galleryImage}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </Suspense>
       )}
+
       {AllImageLists && AllImageLists.length && ImageList === "RELIGIOUS" && (
         <div className="grid md:grid-cols-3">
           {AllImageLists.filter((AllImageList) => {
