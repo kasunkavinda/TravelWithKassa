@@ -90,6 +90,8 @@ const AllImageLists = [
   { id: 35, category: "wild", imageUrl: "/images/gallery-images/35.jpg" },
   { id: 36, category: "wild", imageUrl: "/images/gallery-images/36.jpg" },
   { id: 37, category: "wild", imageUrl: "/images/gallery-images/37.jpg" },
+  { id: 38, category: "wild", imageUrl: "/images/gallery-images/38.jpg" },
+  { id: 39, category: "wild", imageUrl: "/images/gallery-images/39.jpg" },
 ];
 
 function Gallery() {
